@@ -1,0 +1,69 @@
+#1
+items=[3,5,7,9,11,13]
+aabb=items.pop(4)
+items.insert(1,aabb) 
+items.append(aabb)
+print(items)
+
+#2
+first_set = {23,42,65,57,78,23,89} 
+second_set = {57,83,29,67,73,43,48}
+third_set=first_set.difference(second_set)
+if third_set != first_set:
+    print(f'unique element is: {third_set}')
+    common_set = first_set.intersection(second_set)
+    print(f'common element is: {common_set} ')
+else:
+    print('no common element')
+
+#3
+first_set = {27, 43 , 34}
+second_set = {34, 93, 22, 27, 43, 53, 48}
+if first_set.issubset(second_set):
+    print(first_set.clear())
+elif first_set.issuperset(second_set):
+    print(second_set.clear())
+else:
+    print("they are not related.")
+
+#4
+month = {
+    "jan": 47,
+    "feb": 52,
+    "mar": 47,
+    "apr": 44,
+    "may": 52,
+    "jun": 53,
+    "juy": 54,
+    "aug":44,
+    "sep":54
+}
+value = list(set(month.values()))
+print('final list with no duplicate values:',value)
+
+#5
+sample_list=[87,45,41,65,94,41,99,94]
+tup=tuple(set(sample_list))
+print(tup)
+a=max(tup)
+b=min(tup)
+print(f"maximum value, {a} and minimum value, {b}")
+
+#6
+club_a = {"ram", "hari", "shyam"}
+club_b = {"ramm", "gita", "harri"}
+common = club_a.intersection(club_b)
+if common != {*()}:
+    print(f'The following members exist in both group:\n {common} ')
+else:
+    print('No overlapping members found between groups.')
+
+#7
+required_tasks = {"email", "report", "meeting"}
+completed_tasks = {"email", "report"}
+if required_tasks.issubset(completed_tasks):
+    print("task completed")
+elif required_tasks.intersection(completed_tasks) == set():
+    print("none task completed")
+else:
+    print("some task pending")
